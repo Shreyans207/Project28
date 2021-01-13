@@ -20,28 +20,28 @@ function setup() {
 	startMangoPositionX = width-150;
 	startMangoPositionY = height/7;
 
-  stone = new Stone(startBobPositionX-mangoDiameter-530,startMangoPositionY-mangoDiameter+300,bobDiameter);
+  stone = new Stone(startMangoPositionX-mangoDiameter-530,startMangoPositionY-mangoDiameter+300,MangoDiameter);
   
   ellastic = new Ellastic(stone.body,{x:100 , y:400});
-  mango1 = new Mango(startBobPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+150,bobDiameter);
+  mango1 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+150,MangoDiameter);
 
-  mango2 = new Mango(startBobPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+150,bobDiameter);
-  mango3 = new Mango(startBobPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+150,bobDiameter);
+  mango2 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+150,MangoDiameter);
+  mango3 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+150,MangoDiameter);
   
-  mango4 = new Mango(startBobPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+210,bobDiameter);
-  mango5 = new Mango(startBobPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+90,bobDiameter);
+  mango4 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+210,MangoDiameter);
+  mango5 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+90,MangoDiameter);
   
-  mango6 = new Mango(startBobPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+90,bobDiameter);
-  mango7 = new Mango(startBobPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+90,bobDiameter);
+  mango6 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+90,MangoDiameter);
+  mango7 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+90,MangoDiameter);
 
-  mango8 = new Mango(startBobPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+210,bobDiameter);
-  mango9 = new Mango(startBobPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+210,bobDiameter);
+  mango8 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+210,MangoDiameter);
+  mango9 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+210,MangoDiameter);
 
-  mango10 = new Mango(startBobPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+180,bobDiameter);
-  mango11 = new Mango(startBobPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+110,bobDiameter);
+  mango10 = new Mango(startMangoPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+180,MangoDiameter);
+  mango11 = new Mango(startMangoPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+110,MangoDiameter);
   
-  mango12 = new Mango(startBobPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+180,bobDiameter);
-	mango13 = new Mango(startBobPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+110,bobDiameter);
+  mango12 = new Mango(startMangoPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+180,MangoDiameter);
+	mango13 = new Mango(startMangoPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+110,MangoDiameter);
 
 	Engine.run(engine);
 }
