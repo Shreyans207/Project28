@@ -11,51 +11,52 @@ function setup() {
 	engine = Engine.create();
   world = engine.world;
   
-  ground = new Ground(1000,650,2000,20);
-  boy = new Boy(150,600,200,50);
+  ground = new Ground(600,500,2000,20);
+  boy = new Boy(150,500,150,300);
   
-  tree = new Tree(650,350,300,100);
+  tree = new Tree(620,330,300,500);
   
   mangoDiameter=20;
 	startMangoPositionX = width-150;
 	startMangoPositionY = height/7;
 
-  stone = new Stone(startMangoPositionX-mangoDiameter-530,startMangoPositionY-mangoDiameter+300,MangoDiameter);
+  stone = new Stone(startMangoPositionX-mangoDiameter-530,startMangoPositionY-mangoDiameter+300,mangoDiameter);
   
-  ellastic = new Ellastic(stone.body,{x:100 , y:400});
-  mango1 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+150,MangoDiameter);
+  ellastic = new Ellastic(stone.body,{x:100 , y:200});
+  
+  mango1 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+150,mangoDiameter);
 
-  mango2 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+150,MangoDiameter);
-  mango3 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+150,MangoDiameter);
+  mango2 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+150,mangoDiameter);
+  mango3 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+150,mangoDiameter);
   
-  mango4 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+210,MangoDiameter);
-  mango5 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+90,MangoDiameter);
+  mango4 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+210,mangoDiameter);
+  mango5 = new Mango(startMangoPositionX-mangoDiameter+70,startMangoPositionY-mangoDiameter+90,mangoDiameter);
   
-  mango6 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+90,MangoDiameter);
-  mango7 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+90,MangoDiameter);
+  mango6 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+90,mangoDiameter);
+  mango7 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+90,mangoDiameter);
 
-  mango8 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+210,MangoDiameter);
-  mango9 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+210,MangoDiameter);
+  mango8 = new Mango(startMangoPositionX-mangoDiameter,startMangoPositionY-mangoDiameter+210,mangoDiameter);
+  mango9 = new Mango(startMangoPositionX-mangoDiameter-60,startMangoPositionY-mangoDiameter+210,mangoDiameter);
 
-  mango10 = new Mango(startMangoPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+180,MangoDiameter);
-  mango11 = new Mango(startMangoPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+110,MangoDiameter);
+  mango10 = new Mango(startMangoPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+180,mangoDiameter);
+  mango11 = new Mango(startMangoPositionX-mangoDiameter-30,startMangoPositionY-mangoDiameter+110,mangoDiameter);
   
-  mango12 = new Mango(startMangoPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+180,MangoDiameter);
-	mango13 = new Mango(startMangoPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+110,MangoDiameter);
+  mango12 = new Mango(startMangoPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+180,mangoDiameter);
+	mango13 = new Mango(startMangoPositionX-mangoDiameter+30,startMangoPositionY-mangoDiameter+110,mangoDiameter);
 
 	Engine.run(engine);
 }
 
 
 function draw() {
-  rectMode(CENTER);
-  background(255);
+  background("yellow");
+
+  Engine.update(engine);
 
   ground.display();
   boy.display();
 
   tree.display();
-  stone.display();
 
   ellastic.display();
   mango1.display();
@@ -80,28 +81,28 @@ function draw() {
   textSize(20);
   text("Press SPACE to get a second chance to play!!");
 
-  detectCollision(stone,mango1);
-  detectCollision(stone,mango2);
-  detectCollision(stone,mango3);
-  detectCollision(stone,mango4);
-  detectCollision(stone,mango5);
-  detectCollision(stone,mango6);
-  detectCollision(stone,mango7);
-  detectCollision(stone,mango8);
-  detectCollision(stone,mango9);
-  detectCollision(stone,mango10);
-  detectCollision(stone,mango11);
-  detectCollision(stone,mango12);
-  detectCollision(stone,mango13);
+  //detectCollision(stone,mango1);
+  //detectCollision(stone,mango2);
+  //detectCollision(stone,mango3);
+  //detectCollision(stone,mango4);
+  //detectCollision(stone,mango5);
+  //detectCollision(stone,mango6);
+  //detectCollision(stone,mango7);
+  //detectCollision(stone,mango8);
+  //detectCollision(stone,mango9);
+  //detectCollision(stone,mango10);
+  //detectCollision(stone,mango11);
+  //detectCollision(stone,mango12);
+  //detectCollision(stone,mango13);
 
   mouseDragged();
   mouseReleased();
   keyPressed();
-  detectCollision();
+  //detectCollision();
 }
 
  function mouseDragged (){
-    Matter.Body.setPosition(bird.body,{x : mouseX , y : mouseY})
+    Matter.Body.setPosition(stone.body,{x : mouseX , y : mouseY})
 }
 
  function mouseReleased(){
@@ -115,14 +116,13 @@ function keyPressed(){
 	}
 }
 
-function detectCollision(Lstone,Lmango){
-  mangoBodyPosition = lmango.body.position;
-  stoneBodyPosition = lstone.body.position;
+//function detectCollision(Lstone,Lmango){
+  //mangoBodyPosition = lmango.body.position;
+  //stoneBodyPosition = lstone.body.position;
 
-  var distance = dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,stoneBodyPosition.y)
-  if(distance<=lmango.r+lstone.r){
-    Matter.Body.setStatic(lmango.body,false);
-  }
+  //var distance = dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,stoneBodyPosition.y)
+  //if(distance<=lmango.r+lstone.r){
+    //Matter.Body.setStatic(lmango.body,false);
+  //}
 
-}
-
+//}
