@@ -6,8 +6,8 @@ class Ellastic{
             stiffness: 0.004,
             length: 10
         }
-        this.ellastic = Constraint.create(options);
         this.pointB = pointB;
+        this.ellastic = Constraint.create(options);
         World.add(world, this.ellastic);
     }
 
