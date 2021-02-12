@@ -3,7 +3,9 @@ class Boy {
         var options = {
             isStatic : true,
         }
-        this.body = Bodies.rectangle(x,y,width,height,options) 
+        this.body = Bodies.rectangle(x,y,width,height,options) ;
+        this.x = x;
+        this.y = y;
         this.width = width; 
         this.height = height;
   
@@ -12,10 +14,7 @@ class Boy {
     }
      display(){
          var pos = this.body.position;
-         push();
-         translate(pos.x,pos.y);
          imageMode(CENTER);
-         image(this.image,x,y,this.width,this.height);
-         pop();
+         image(this.image,pos.x,pos.y,this.width,this.height);
      }
   }
